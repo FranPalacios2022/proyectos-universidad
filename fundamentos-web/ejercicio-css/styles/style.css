@@ -1,0 +1,267 @@
+/* ============================================
+   1. RESET INICIAL
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   2. VARIABLES Y PALETA
+   ============================================ */
+:root {
+  --color-principal: #7c3f58;
+  --color-secundario: #d97757;
+  --color-acento: #b8c98d;
+  --color-fondo: #fff8f0;
+  --color-texto: #2f2933;
+  --color-suave: #6f6570;
+  --color-borde: #e5d6ca;
+  --espaciado: 1rem;
+  --radio: 0.75rem;
+  --ancho-max: 68rem;
+  --fuente: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+/* ============================================
+   3. TIPOGRAFIA Y ELEMENTOS BASE
+   ============================================ */
+body {
+  font-family: var(--fuente);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: var(--espaciado);
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-bottom: var(--espaciado);
+}
+
+a {
+  color: var(--color-principal);
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-secundario);
+}
+
+/* ============================================
+   4. HEADER Y NAVEGACION
+   ============================================ */
+header {
+  padding: var(--espaciado) 2rem;
+  color: var(--color-fondo);
+  background-color: var(--color-principal);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header nav a {
+  display: inline-block;
+  margin-right: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  color: var(--color-fondo);
+  border-radius: var(--radio);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+header nav a:hover,
+header nav a.activo {
+  color: var(--color-texto);
+  background-color: var(--color-acento);
+}
+
+/* ============================================
+   5. CONTENIDO PRINCIPAL Y CLASES PROPIAS
+   ============================================ */
+main {
+  max-width: var(--ancho-max);
+  margin: 2rem auto;
+  padding: 0 var(--espaciado);
+}
+
+main section {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.destacado {
+  padding-left: 1rem;
+  color: var(--color-principal);
+  font-size: 1.1rem;
+  border-left: 0.25rem solid var(--color-secundario);
+}
+
+.lista-servicios {
+  list-style: none;
+}
+
+.lista-servicios li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.tarjeta-info {
+  padding: 1.25rem;
+  background-color: #fff0e5;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+/* ============================================
+   6. TABLA ZEBRADA
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--espaciado);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--color-borde);
+}
+
+th {
+  color: var(--color-fondo);
+  background-color: var(--color-principal);
+}
+
+td {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #f9e9dc;
+}
+
+/* ============================================
+   7. FORMULARIO POR ATRIBUTOS
+   ============================================ */
+fieldset {
+  margin-bottom: var(--espaciado);
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--color-principal);
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-texto);
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--espaciado);
+  padding: 0.7rem;
+  color: var(--color-texto);
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: 0.4rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-secundario);
+  outline: 0.2rem solid rgba(217, 119, 87, 0.25);
+}
+
+button[type="submit"] {
+  padding: 0.7rem 1.2rem;
+  color: var(--color-fondo);
+  background-color: var(--color-principal);
+  border: 0;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-0.1rem);
+}
+
+button[type="submit"]:focus {
+  outline: 0.2rem solid var(--color-acento);
+  outline-offset: 0.15rem;
+}
+
+/* ============================================
+   8. PSEUDO-ELEMENTOS
+   ============================================
+*/
+.lista-servicios li::before {
+  position: absolute;
+  left: 0.25rem;
+  color: var(--color-secundario);
+  content: "◆";
+}
+
+/* ============================================
+   9. FOOTER
+   ============================================ */
+footer {
+  position: relative;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  color: var(--color-fondo);
+  text-align: center;
+  background-color: var(--color-principal);
+}
+
+footer p {
+  margin-bottom: 0;
+}
