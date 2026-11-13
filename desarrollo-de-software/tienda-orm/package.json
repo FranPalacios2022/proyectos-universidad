@@ -1,0 +1,13 @@
+{
+  "name": "tienda-orm",
+  "version": "1.0.0",
+  "description": "DDS · UTN FRC · Ejercitación ORM con Sequelize y SQLite",
+  "type": "module",
+  "scripts": {
+    "init-db": "node scripts/inicializar-bd.js"
+  },
+  "dependencies": {
+    "sequelize": "^6.37.0",
+    "sqlite3": "^5.1.7"
+  }
+}
