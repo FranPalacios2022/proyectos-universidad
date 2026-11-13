@@ -1,0 +1,12 @@
+/* ✅ DADO: estilos mínimos. Bootstrap hace el resto, no necesitás tocar nada. */
+body { background: #f1f3f5; }
+
+/* Cartel punteado para los TODO que todavía no completaste. */
+.todo {
+  color: #868e96;
+  border: 1px dashed #ced4da;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: .85rem;
+  font-style: italic;
+}
