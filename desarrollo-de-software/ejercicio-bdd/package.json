@@ -1,0 +1,13 @@
+{
+  "name": "bd-practica-sqlite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clientes": "node app.js",
+    "productos": "node productos.js",
+    "buscar": "node buscar.js",
+    "pedidos": "node pedidos.js",
+    "reporte": "node reporte.js"
+  }
+}
